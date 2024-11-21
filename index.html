@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Kuldip Sahota's Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hello! My name is Kuldip Sahota, and I was born and raised in Toronto. I have a passion for video games and basketball, which not only serve as my favorite pastimes but also fuel my competitive spirit.</p>
+        <p>Throughout my journey, I have explored various interests and hobbies, constantly seeking to learn and grow. From honing my skills on the basketball court to immersing myself in the intricate worlds of video games, I embrace every opportunity to challenge myself and enjoy the process despite my mental difficulties.</p>
+        <p>As I continue to evolve in my journey, I am excited to see where my passions will take me, whether it's pursuing a career in game design or exploring new avenues in sports.</p>
+    </section>
+
+    <!-- Projects Section with Toggle Button and Hidden Details -->
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="project">
+            <h3>Project 1</h3>
+            <button class="toggle-details-btn">Show Details</button>
+            <div class="project-details hidden">
+                <p>This is a description of Project 1. It highlights the main features and skills applied.</p>
+            </div>
+        </div>
+        <div class="project">
+            <h3>Project 2</h3>
+            <button class="toggle-details-btn">Show Details</button>
+            <div class="project-details hidden">
+                <p>This is a description of Project 2. It includes the technologies and methods used.</p>
+            </div>
+        </div>
+    </section>    
+
+    <!-- Contact Section with Form Validation -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Kuldip Sahota</p>
+    </footer>
+
+    <!-- My Java File -->
+    <script src="script.js" defer></script>
+</body>
+</html>

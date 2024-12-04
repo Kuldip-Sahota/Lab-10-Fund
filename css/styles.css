@@ -9,6 +9,7 @@ body {
     background-repeat: no-repeat; 
     line-height: 1.6;
     transition: all 0.3s ease; /* Smooth transition for background and text color */
+    animation: fadeIn 1s ease-in; /* Fade-in animation on page load */
 }
 
 /* Dark Mode Styles */
@@ -17,12 +18,15 @@ body.dark-mode {
     color: white; /* White text for dark mode */
 }
 
+/* Header and Footer */
 header, footer {
     background-color: rgba(43, 1, 17, 0.582);  
     color: white;
     text-align: center;
     padding: 15px 0; 
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+    transition: all 0.3s ease-in-out;
+    animation: slideIn 0.5s ease-in-out; /* Slide-in animation for header/footer */
 }
 
 /* Dark Mode Header and Footer */
@@ -48,7 +52,7 @@ nav ul li a {
     font-weight: bold;
     padding: 10px 15px; 
     border-radius: 5px; 
-    transition: background-color 0.3s; 
+    transition: background-color 0.3s, transform 0.2s; /* Transition for hover effects */
 }
 
 /* Dark Mode Navigation */
@@ -59,6 +63,7 @@ body.dark-mode nav ul li a {
 /* Hover effects */
 nav ul li a:hover {
     background-color: rgba(255, 255, 255, 0.2); 
+    transform: scale(1.1); /* Add scale effect on hover */
 }
 
 body.dark-mode nav ul li a:hover {
@@ -72,7 +77,8 @@ section {
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4), 0 0 10px rgba(0, 0, 0, 0.6); 
-    transition: background-color 0.3s, color 0.3s;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    animation: fadeInUp 1s ease-out; /* Fade and slide-up effect for sections */
 }
 
 /* Dark Mode Section */
@@ -113,4 +119,36 @@ html {
 button.dark-mode {
     background-color: #444; /* Dark button for dark mode */
     color: white; /* Light text */
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

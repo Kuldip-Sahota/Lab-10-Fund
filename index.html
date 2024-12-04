@@ -18,30 +18,49 @@
             </ul>
         </nav>
     </header>
+
     <!-- Dark Mode Toggle Button -->
     <button id="toggleTheme">Toggle Dark Mode</button> 
-    
+
     <!-- About Section -->
     <section id="about">
         <h2>About Me</h2>
         <p>Hello! My name is Kuldip Sahota, and I was born and raised in Toronto. I have a passion for video games and basketball.</p>
     </section>
 
-    <!-- Projects Section -->
+    <!-- Projects Section with Project Filtering -->
     <section id="projects">
         <h2>My Projects</h2>
-        <div class="project">
-            <h3>Project 1</h3>
-            <button class="toggle-details-btn">Show Details</button>
-            <div class="project-details hidden">
-                <p>This is a description of Project 1. It highlights the main features and skills applied.</p>
-            </div>
+
+        <!-- Filter Buttons -->
+        <div class="filters">
+            <button class="filter-btn" data-category="all">All</button>
+            <button class="filter-btn" data-category="javascript">JavaScript</button>
+            <button class="filter-btn" data-category="html-css">HTML/CSS</button>
         </div>
-        <div class="project">
-            <h3>Project 2</h3>
-            <button class="toggle-details-btn">Show Details</button>
-            <div class="project-details hidden">
-                <p>This is a description of Project 2. It includes the technologies and methods used.</p>
+
+        <!-- Projects -->
+        <div class="projects">
+            <div class="project" data-category="html-css">
+                <h3>Project 1: Blog Posts</h3>
+                <button class="toggle-details-btn">Show Details</button>
+                <div class="project-details hidden">
+                    <p>Blog Posts. You can view and even create your own post! Add an image, title, and description. Check it out here: <a href="https://kuldip-sahota.github.io/dynamic-blog-website/" target="_blank">Dynamic Blog Website</a></p>
+                </div>
+            </div>
+            <div class="project" data-category="javascript">
+                <h3>Project 2: Welcome User Page</h3>
+                <button class="toggle-details-btn">Show Details</button>
+                <div class="project-details hidden">
+                    <p>Welcome User Page, in this project I created a welcome user page. It’ll save your name to whatever you type in. You can also clean the name as well. Using JavaScript, it saves in the console. Check it out here: <a href="https://kuldip-sahota.github.io/storage-assignment-2-web/" target="_blank">Storage Assignment 2 Web</a></p>
+                </div>
+            </div>
+            <div class="project" data-category="html-css">
+                <h3>Project 3: Math Quiz</h3>
+                <button class="toggle-details-btn">Show Details</button>
+                <div class="project-details hidden">
+                    <p>Math Quiz, here you get to see HTML at work. Have a fun little quiz solving some math problems. Your score will be released as soon as you hit submit. Check it out here: <a href="https://kuldip-sahota.github.io/interactive-quiz/" target="_blank">Interactive Quiz</a></p>
+                </div>
             </div>
         </div>
     </section>

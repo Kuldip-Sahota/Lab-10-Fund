@@ -31,3 +31,24 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+document.addEventListener('DOMContentLoaded', () => {
+    // Filter buttons and projects
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const projects = document.querySelectorAll('.project');
+
+    // Add event listener to each filter button
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const category = this.dataset.category;
+
+            // Filter projects based on category
+            projects.forEach(project => {
+                if (category === 'all' || project.dataset.category === category) {
+                    project.style.display = 'block'; // Show the project
+                } else {
+                    project.style.display = 'none'; // Hide the project
+                }
+            });
+        });
+    });
+});

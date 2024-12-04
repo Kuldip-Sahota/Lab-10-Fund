@@ -3,14 +3,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const projectDetails = document.querySelectorAll('.project-details');
     const toggleButtons = document.querySelectorAll('.toggle-details-btn'); // Match the class name
+    const toggleThemeButton = document.getElementById('toggleTheme'); // Get the dark mode toggle button
 
+    // Check if buttons and elements exist
     console.log('Project details:', projectDetails);
     console.log('Toggle buttons:', toggleButtons);
 
-    if (toggleButtons.length === 0) {
-        console.error('No buttons found. Check your HTML classes.');
-    }
-
+    // Event listener for project details toggle
     toggleButtons.forEach((button, index) => {
         button.addEventListener('click', () => {
             console.log(`Button clicked: ${index}`);
@@ -23,4 +22,12 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // Dark mode toggle functionality
+    if (toggleThemeButton) {
+        toggleThemeButton.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');  // Toggle the dark mode class
+            toggleThemeButton.classList.toggle('dark-mode');  // Optional: change button appearance in dark mode
+        });
+    }
 });

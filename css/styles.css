@@ -1,4 +1,4 @@
-/* General Styles */ 
+/* General Styles */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -8,6 +8,13 @@ body {
     background-size: cover; 
     background-repeat: no-repeat; 
     line-height: 1.6;
+    transition: all 0.3s ease; /* Smooth transition for background and text color */
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background: #121212; /* Dark background */
+    color: white; /* White text for dark mode */
 }
 
 header, footer {
@@ -18,12 +25,12 @@ header, footer {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
 }
 
-footer {
-    position: relative;
-    bottom: 0;
-    width: 100%;
+/* Dark Mode Header and Footer */
+body.dark-mode header, body.dark-mode footer {
+    background-color: rgba(0, 0, 0, 0.8); /* Darker header/footer */
 }
 
+/* Navigation */
 nav ul {
     list-style: none;
     padding: 0;
@@ -44,22 +51,34 @@ nav ul li a {
     transition: background-color 0.3s; 
 }
 
-nav ul li a:hover {
-    background-color: rgba(255, 255, 255, 0.2); 
-    text-decoration: none; 
+/* Dark Mode Navigation */
+body.dark-mode nav ul li a {
+    color: #e0e0e0; /* Light text for dark mode */
 }
 
+/* Hover effects */
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2); 
+}
+
+body.dark-mode nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.4); /* Lighter hover effect in dark mode */
+}
+
+/* Sections */
 section {
     padding: 30px;
     margin: 20px;
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4), 0 0 10px rgba(0, 0, 0, 0.6); 
+    transition: background-color 0.3s, color 0.3s;
 }
 
-h2 {
-    color: #333; 
-    margin-bottom: 15px; 
+/* Dark Mode Section */
+body.dark-mode section {
+    background-color: #333; /* Dark background for sections */
+    color: white; /* Light text for dark mode sections */
 }
 
 /* Media Queries for Mobile Devices */
@@ -80,10 +99,18 @@ h2 {
     }
 }
 
+/* Hidden class */
 .hidden {
     display: none;
 }
 
+/* Scroll behavior */
 html {
     scroll-behavior: smooth;
+}
+
+/* Dark Mode Button */
+button.dark-mode {
+    background-color: #444; /* Dark button for dark mode */
+    color: white; /* Light text */
 }

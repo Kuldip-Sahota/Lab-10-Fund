@@ -83,3 +83,7 @@ h2 {
 .hidden {
     display: none;
 }
+
+html {
+    scroll-behavior: smooth;
+}
